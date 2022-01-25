@@ -53,13 +53,13 @@ class PendingVisit
 
     protected function shouldBeLoggedAgain(Visit $visit)
     {
-        return !$visit->wasRecentlyCreated && $visit->created_at->lt($this->interval);
+        return ! $visit->wasRecentlyCreated && $visit->created_at->lt($this->interval);
     }
 
     public function __destruct()
     {
         $visit = $this->model->visits()->latest()->firstOrCreate($this->buildJsonColumns(), [
-            'data' => $this->attributes
+            'data' => $this->attributes,
         ]);
 
         $visit->when($this->shouldBeLoggedAgain($visit), function () use ($visit) {

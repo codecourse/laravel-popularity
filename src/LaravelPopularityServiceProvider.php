@@ -4,7 +4,6 @@ namespace Codecourse\LaravelPopularity;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Codecourse\LaravelPopularity\Commands\LaravelPopularityCommand;
 
 class LaravelPopularityServiceProvider extends PackageServiceProvider
 {
