@@ -2,9 +2,9 @@
 
 namespace Codecourse\LaravelPopularity\Tests;
 
+use Codecourse\LaravelPopularity\LaravelPopularityServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Codecourse\LaravelPopularity\LaravelPopularityServiceProvider;
 
 class TestCase extends Orchestra
 {

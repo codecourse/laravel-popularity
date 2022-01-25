@@ -32,7 +32,7 @@ it('creates a visit with custom data', function () {
     $article = Article::factory()->create();
 
     $article->visit()->withData([
-        'cats' => true
+        'cats' => true,
     ]);
 
     expect($article->visits->first()->data)->toMatchArray(['cats' => true]);
@@ -59,11 +59,11 @@ it('does not create dupliate visits with the same data', function () {
     $article = Article::factory()->create();
 
     $article->visit()->withData([
-        'cats' => true
+        'cats' => true,
     ]);
 
     $article->visit()->withData([
-        'cats' => true
+        'cats' => true,
     ]);
 
     expect($article->visits->count())->toBe(1);
